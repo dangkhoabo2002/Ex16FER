@@ -6,7 +6,10 @@ export const userSlice = createSlice({
   reducers: {
     addUser: (state, action) => {
       state.value.push(action.payload);
-      // Write code for addUser function
+      state.value.forEach(element => {
+        console.log(`name: ${element.name}`);
+        console.log(`username: ${element.username}`);
+      });
     },
     deleteUser: (state, action) => {
       state.value = state.value.filter((user) => user.id !== action.payload.id);
@@ -23,5 +26,6 @@ export const userSlice = createSlice({
   },
 });
 
-export default userSlice.reducer;
+
 export const { addUser, deleteUser, updateUsername } = userSlice.actions;
+export default userSlice.reducer;

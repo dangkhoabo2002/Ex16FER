@@ -39,9 +39,9 @@ export default function AddingBox() {
           name="username"
           type="username"
           margin="normal"
-          value={name}
+          value={username}
           onChange={(event) => {
-            setName(event.target.value);
+            setUsername(event.target.value);
           }}
         />
         <Button

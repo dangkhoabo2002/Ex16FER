@@ -25,7 +25,7 @@ export default function Table() {
             <th>Change Username</th>
             <th>Actions</th>
           </tr>
-          {UsersData.map((user) => (
+          {userList.map((user) => (
             <tr>
               <td className="info">
                 <p className="name">{user.name}</p>
